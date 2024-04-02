@@ -5,5 +5,4 @@ for _ in range(10):
     li.append(num%42)
 
 a = set(li)
-count = len(li) - len(a)
 print(len(a))
