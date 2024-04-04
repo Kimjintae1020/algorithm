@@ -4,10 +4,11 @@ arr = []
 count = 0
 
 for _ in range(n):
-    num = int(input())
-    arr.append(num)
+    arr.append(int(input()))
 
-# 내림차순으로 정렬
-arr.sort(reverse=True)
+    
+for i in reversed(range(n)):
+    count+= k // arr[i]
+    k = k % arr[i]
 
-k
+print(count)
