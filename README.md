@@ -1,2 +1,2 @@
-# algorithm
-Python으로 알고리즘을 풉니다.
+# 알고리즘
+Java가 좀 묻어 있지만 Python으로 알고리즘을 풉니다.
