@@ -1,12 +1,27 @@
-input()
-n = set(map(int,input().split()))
-print(n)
+import sys
 
-input()
-m = list(map(int,input().split()))
+n = int(sys.stdin.readline())
+cards = sorted(list(map(int, sys.stdin.readline().split())))
 
-for i in m:
-    if i in n:
-        print(1, end=' ')
-    else:
-        print(0, end=' ')
+m = int(sys.stdin.readline())
+checks = list(map(int, sys.stdin.readline().split()))
+
+for check in checks:
+    low = 0
+    high = n-1
+    exist = False
+    
+    while low <= high:
+        mid = (low + high) // 2     #중간값
+
+        if cards[mid] > check:  
+            high = mid - 1  
+
+        elif cards[mid] < check:  
+            low = mid + 1  
+
+        else:
+            exist = True
+            break
+
+    print(1 if exist else 0, end=' ')
