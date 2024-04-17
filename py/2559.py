@@ -1,12 +1,7 @@
-date, temp = map(int,input().split())
-
-num_li = list(map(int,input().split()))
-
-
-max = num_li[0]
-
-for i in range(temp):
-    sum = num_li[i]
-
-for i in range(temp-1,date): #2~10
-
+N, M = map(int, input().split())
+N_list = list(map(int, input().split()))
+tmp = 0
+tmp_val = []
+for i in range(N - M + 1):
+    tmp_val.append(sum(N_list[i:i+M]))
+print(max(tmp_val))
